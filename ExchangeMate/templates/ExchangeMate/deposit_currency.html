@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    Exchange Mate - Deposit
+{% endblock %}
+
+{% block css_block %}
+<link rel="stylesheet" href="{% static "ExchangeApp/withdraw.css"%}">
+{% endblock %}
+
+{% block content %}
+<header id="main-navigation">
+  <nav>
+    <div class="left-links">
+      <ul>
+        <li><a href="/">Start</a></li>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/deposit">Deposit</a></li>
+        <li><a href="/withdraw">Withdraw</a></li>
+        <li><a href="/exchange">Exchange</a></li>
+      </ul>
+    </div>
+    <div class="user-actions">
+      <a href="/logout">Log Out</a>
+    </div>
+  </nav>
+</header>
+<section id="currency-withdraw">
+  <header>
+    <h2>Withdraw {{ currency }}</h2>
+  </header>
+  <form action="/withdraw/{{ slug }}" method="post">
+    {% csrf_token %}
+    <label for="amount">Withdraw {{ currency }}:</label>
+    <input type="number" name="amount" id="amount" step="0.01" required>
+    <span>{{ currency }}</span>
+    <button type="submit" class="withdraw-button">Withdraw</button>
+  </form>
+</section>
+{% endblock %}
+

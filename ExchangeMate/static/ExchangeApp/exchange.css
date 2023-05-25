@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+}
+
+#main-navigation {
+  background-color: #222;
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.left-links {
+  flex-grow: 1;
+}
+
+.left-links ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.left-links ul li {
+  margin-right: 10px;
+}
+
+.left-links ul li a {
+  color: #0f0;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.user-actions a {
+  color: #0f0;
+  margin-left: 10px;
+}
+
+#currency-rates {
+  background-color: #111;
+  padding: 20px;
+  text-align: center;
+}
+
+#currency-rates header {
+  color: #0f0;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#currency-rates table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+#currency-rates th,
+#currency-rates td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #0f0;
+  color: #0f0;
+}
+
+#currency-rates th {
+  background-color: #222;
+}
+.exchange-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0f0;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.exchange-button:hover {
+  background-color: #0c0;
+}
+
+h2 {
+  color: #0f0;
+}
+
+h3 {
+  color: #0f0;
+  margin-top: 20px;
+}
+
+label {
+  color: #0f0;
+}
+
+input[type="number"],
+span {
+  color: #0f0;
+}
+
+.exchange-button {
+  background-color: #0f0;
+  color: #000;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.exchange-button:hover
+
+h2, h3, label, input[type="number"], span {
+  color: #0f0;
+}
+
+#currency-exchange {
+  margin: 50px auto;
+  width: 400px;
+  text-align: center;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.exchange-button {
+  background-color: #0f0;
+  color: #000;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.exchange-button:hover {
+  background-color: #0c0;
+}
+

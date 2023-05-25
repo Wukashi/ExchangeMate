@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    Exchange Mate - Exchange
+{% endblock %}
+
+{% block css_block %}
+<link rel="stylesheet" href="{% static "ExchangeApp/exchange.css"%}">
+{% endblock %}
+
+{% block content %}
+<header id="main-navigation">
+  <nav>
+    <div class="left-links">
+      <ul>
+        <li><a href="/">Start</a></li>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/deposit">Deposit</a></li>
+        <li><a href="/withdraw">Withdraw</a></li>
+        <li><a href="/exchange">Exchange</a></li>
+      </ul>
+    </div>
+    <div class="user-actions">
+      <a href="/logout">Log Out</a>
+    </div>
+  </nav>
+</header>
+<section id="currency-exchange">
+  <header>
+    <h2>Exchange {{ currency }}</h2>
+  </header>
+  <form action="#" method="post">
+    {% csrf_token %}
+
+    <h3>Exchange to:</h3>
+
+    {% if slug == "zloty" %}
+      <label for="euro">Euro:</label>
+      <input type="number" name="euro" id="euro" step="0.01">
+      <label for="dollar">Dollar:</label>
+      <input type="number" name="dollar" id="dollar" step="0.01" >
+      <label for="pound">Pound:</label>
+      <input type="number" name="pound" id="pound" step="0.01" required>
+    {% elif slug == "euro" %}
+      <label for="zloty">Złoty:</label>
+      <input type="number" name="zloty" id="zloty" step="0.01" required>
+      <label for="dollar">Dollar:</label>
+      <input type="number" name="dollar" id="dollar" step="0.01" required>
+      <label for="pound">Pound:</label>
+      <input type="number" name="pound" id="pound" step="0.01" required>
+    {% elif slug == "dollar" %}
+      <label for="zloty">Złoty:</label>
+      <input type="number" name="zloty" id="zloty" step="0.01" required>
+      <label for="euro">Euro:</label>
+      <input type="number" name="euro" id="euro" step="0.01" required>
+      <label for="pound">Pound:</label>
+      <input type="number" name="pound" id="pound" step="0.01" required>
+    {% elif slug == "pound" %}
+      <label for="zloty">Złoty:</label>
+      <input type="number" name="zloty" id="zloty" step="0.01" required>
+      <label for="euro">Euro:</label>
+      <input type="number" name="euro" id="euro" step="0.01" required>
+      <label for="dollar">Dollar:</label>
+      <input type="number" name="dollar" id="dollar" step="0.01" required>
+    {% endif %}
+    <button type="submit" class="exchange-button">Exchange</button>
+  </form>
+</section>
+{% endblock %}
+

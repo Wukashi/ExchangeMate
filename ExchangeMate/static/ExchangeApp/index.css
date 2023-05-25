@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+}
+
+#main-navigation {
+  background-color: #222;
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.left-links {
+  flex-grow: 1;
+}
+
+.left-links ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.left-links ul li {
+  margin-right: 10px;
+}
+
+.left-links ul li a {
+  color: #0f0;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.user-actions a {
+  color: #0f0;
+  margin-left: 10px;
+}
+
+#welcome {
+  background-color: #111;
+  padding: 20px;
+  text-align: center;
+}
+
+#welcome header {
+  color: #0f0;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#welcome img {
+  width: 400px;
+  height: 170px;
+  margin-bottom: 10px;
+}

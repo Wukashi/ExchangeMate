@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    Exchange Mate - Withdraw
+{% endblock %}
+
+{% block css_block %}
+<link rel="stylesheet" href="{% static "ExchangeApp/withdraw.css"%}">
+{% endblock %}
+
+{% block content %}<header id="main-navigation">
+  <nav>
+    <div class="left-links">
+      <ul>
+        <li><a href="/">Start</a></li>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/deposit">Deposit</a></li>
+        <li><a href="/withdraw">Withdraw</a></li>
+        <li><a href="/exchange">Exchange</a></li>
+      </ul>
+    </div>
+    <div class="user-actions">
+      <a href="/logout">Log Out</a>
+    </div>
+  </nav>
+</header>
+<section id="currency-rates">
+    <header>
+    <h2>Currency Rates</h2>
+  </header>
+  <table>
+    <tr>
+      <th>Currency</th>
+      <th>Rate</th>
+      <th>Your Balance</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td>Złoty</td>
+      <td>1.00</td>
+      <td>1000.00</td>
+      <td><a href="/withdraw/zloty" class="withdraw-button">Withdraw</a></td>
+    </tr>
+    <tr>
+      <td>Euro</td>
+      <td>4.55</td>
+      <td>250.00</td>
+      <td><a href="/withdraw/euro" class="withdraw-button">Withdraw</a></td>
+    </tr>
+    <tr>
+      <td>Dollar</td>
+      <td>3.90</td>
+      <td>500.00</td>
+      <td><a href="/withdraw/dollar" class="withdraw-button">Withdraw</a></td>
+    </tr>
+    <tr>
+      <td>Pound</td>
+      <td>5.20</td>
+      <td>750.00</td>
+      <td><a href="/withdraw/pound" class="withdraw-button">Withdraw</a></td>
+    </tr>
+  </table>
+</section>
+{% endblock %}

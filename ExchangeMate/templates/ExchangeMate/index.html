@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    Exchange Mate
+{% endblock %}
+
+{% block css_block %}
+<link rel="stylesheet" href="{% static "ExchangeApp/index.css"%}">
+{% endblock %}
+
+{% block content %}
+    <header id="main-navigation">
+  <nav>
+    <div class="left-links">
+      <ul>
+        <li><a href="/">Start</a></li>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/deposit">Deposit</a></li>
+        <li><a href="/withdraw">Withdraw</a></li>
+        <li><a href="/exchange">Exchange</a></li>
+      </ul>
+    </div>
+    <div class="user-actions">
+      <a href="/login">Login</a>
+      <a href="/createaccount">Create Account</a>
+    </div>
+  </nav>
+</header>
+<section id="welcome">
+    <header>
+        <img src="{% static 'ExchangeApp/dolar.jpg' %}" alt="Łukasz tu był">
+        <h2>Exchange Mate</h2>
+        Create yours account and exchange money
+    </header>
+</section>
+{% endblock %}
